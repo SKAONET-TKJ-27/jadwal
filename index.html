@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>
+        Jadwal X TKJ B
+    </title>
+    <meta name="theme-color" content="#024b9e"/>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <style type="text/css">
+        .button{
+            border: none;
+            cursor: pointer;
+            border-radius: 42px 42px 42px 42px;
+            height: 32pt;
+        }
+        body{
+            width: 100%; height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .div{
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .button-primary{
+            background-color: #101449ff;
+            width: 110pt;
+        }
+        .button-secondary{
+            background-color: #101449ff;
+            width: 110pt;
+        }
+        .button-primary:hover{
+            background-color: #472D77ff;
+        }
+        .button-secondary:hover{
+            background-color: #472D77ff;
+        }
+        .table{
+            color: rgb(36, 36, 36);
+            border-radius: 24px 24px 24px 24px;
+        }
+        .fon{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            color: #ffffff;
+        }
+        .isi{
+            border: none;
+            border-radius: 24px 24px 24px 24px;
+            background-color: #101449ff;
+            color: #ffffff;
+            width: 30pt;
+            height: 30pt;
+        }
+        .judul{
+            border: none;
+            border-radius: 24px 24px 24px 24px;
+            background-color: #472D77ff;;
+            color: rgb(203, 216, 255);
+            width: 50pt;
+            height: 30pt;
+        }
+        .judul-atas{
+            border: none;
+            border-radius: 24px 24px 24px 24px;
+            background-color: #472D77ff;;
+            color: rgb(203, 216, 255);
+            width: 30pt;
+            height: 30pt;
+        }
+        .gambar{
+            background-image: url("wall.jpg");
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #020017;
+        }
+        .gambar::after{
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            background-size: cover;
+        }
+        table{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        html{
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+        }
+        span.size-20 {
+            font-size: 20px;
+            font-variation-settings: 'OPSZ' 20;
+        }
+        span.size-26 {
+            font-size: 24pt;
+            font-variation-settings: 'OPSZ' 22;
+        }
+        h1{
+            font-size: 20pt;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            align-items: center;
+        }
+        h2{
+            font-size: 18pt;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body::-webkit-scrollbar{
+            display: none;
+            width: 0;
+        }
+        .tombol-pelajaran{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            border-radius: 24px 24px 24px 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        section{
+            height: auto;
+            width: auto;
+            border-radius: 24px 24px 24px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+            backdrop-filter: none;
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .judul-dokumen {
+            font-size: larger;
+            font-weight: 750;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #101449ff;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+        .judul-seragam {
+            font-size: larger;
+            font-weight: 750;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #101449ff;
+            display: flex;
+            justify-content: center;
+        }
+        .deskripsi{
+            color: #101449ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+        .menu{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            margin-left: 10pt;
+            margin-right: 10pt;
+            margin-top: 7pt;
+            margin-bottom: 10pt;
+        }
+        .hamburger{
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            color: #101449ff;
+        }
+        .hamburger:hover{
+            color: #472D77ff;
+        }
+        .nav-menu{
+            height: 80pt;
+            width: 120pt;
+            gap: 5px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            left: 100%;
+            transform: translate(-100%, 0%);
+            border-radius: 24px 24px 24px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(2px);
+        }
+    </style>
+    <script type="text/javascript">
+        function pesan() {
+            alert ("jadwal pelajaran kelas 10 TKJ B. dibuat oleh Ata")
+        }
+        console.warn("Gimana Rasanya Taruna. Enak?")
+        console.error("Jangan Nyerah Ya. Tetap Bersabar")
+        function DPK1() {
+            alert("Pengajar: Bpk Sudar. 6 jam pelajaran")
+        }
+        function PPKn() {
+            alert("Pengajar: Ibu Epi. 2 jam pelajaran")
+        }
+        function BJawa() {
+            alert("Pengajar: Ibu Fatkha. 2 jam pelajaran sampai bel pulang")
+        }
+        function Penjas() {
+            alert("Pengajar: Ibu Siti. 3 jam pelajaran")
+        }
+        function bi() {
+            alert("Pengajar: Ibu Widi. 2 jam pelajaran")
+        }
+        function TIK() {
+            alert("Ibu Ilmi dan Lati. 4 jam pelajaran dan dipisahkan istirahat")
+        }
+        function BK() {
+            alert("Pengajar: Ibu Devi. 2 jam pelajaran sampai bel pulang")
+        }
+        function IPAS() {
+            alert("Pengajar: Ibu Purwanti. 3 jam pelajaran")
+        }
+        function english() {
+            alert("2 jam pelajaran. Nama pengajar belum ter-input")
+        }
+        function DPK2() {
+            alert("Pengajar: Ibu Hanna. 6 jam pelajaran, dipisahkan istirahat, dan sampai bel pulang")
+        }
+        function MTK() {
+            alert("Pengajar: Bpk Agus. 2 jam pelajaran")
+        }
+        function bi() {
+            alert("Pengajar: Ibu Widi. 2 jam pelajaran")
+        }
+        function SI() {
+            alert("Pengajar: Bpk Riyan. 2 jam pelajaran")
+        }
+        function SB() {
+            alert("Pengajar: Ibu Rini. 2 jam pelajaran")
+        }
+        function PAI() {
+            alert("Pengajar: Bpk Huda. 3 jam pelajaran")
+        }
+
+        function JamKos() {
+            alert("tidak ada jam")
+        }
+        function Upacara() {
+            alert("Upacara hari senin 2 minggu sekali")
+        }
+        function Senam() {
+            alert("Senam pagi atau pelajaran biasa")
+        }
+
+        function s_senin() {
+            alert("Abu-abu putih lengan panjang")
+        }
+        function s_selasa() {
+            alert("Batik Jogja")
+        }
+        function s_rabu() {
+            alert("Batik sekolah")
+        }
+        function s_kamis() {
+            alert("Abu-abu putih lengan pendek")
+        }
+        function s_jumat() {
+            alert("Pramuka")
+        }
+
+        function MenuToggle() {
+            var div = document.getElementById("Menu");
+            if (div.style.display === "none") {
+                div.style.display = "flex";
+            } else {
+                div.style.display = "none";
+            }
+        }
+    </script>
+</header>
+<body class="gambar">
+    <section>
+        <article>
+            <div class="menu">
+                <font class="judul-dokumen">Jadwal pelajaran</font>                
+                <button type="button" class="hamburger" onclick="MenuToggle()"><span class="material-symbols-rounded size-26">menu</span></button>
+            </div>
+        </article>
+        <div class="nav-menu" id="Menu">
+            <button type="button" class="button-secondary button fon" onclick="pesan()">
+                <div class="div">
+                    <span class="material-symbols-rounded size-20">info</span>info
+                </div>
+            </button>
+            <div>        
+                <a href="https://wa.me/qr/IISMW4IADWNRL1" target="_blank"></a>
+                    <button type="button" class="button-primary button fon">
+                        <div class="div">
+                            <span class="material-symbols-rounded size-20">support_agent</span>
+                            lapor Kesalahan
+                        </div>
+                    </button>
+                </a>
+            </div>      
+        </div>
+        <table align="center" class="tabel">
+            <tr>
+                <th class="judul-atas fon">
+                    Hari
+                </th>
+                <th class="judul-atas fon">1</th>
+                <th class="judul-atas fon">2</th>
+                <th class="judul-atas fon">3</th>
+                <th class="judul-atas fon">4</th>
+                <th class="judul-atas fon">5</th>
+                <th class="judul-atas fon">6</th>
+                <th class="judul-atas fon">7</th>
+                <th class="judul-atas fon">8</th>
+                <th class="judul-atas fon">9</th>
+                <th class="judul-atas fon">10</th>
+                <th class="judul-atas fon">11</th>
+             </tr>
+             <tr>
+                <th class="judul fon">Senin</th> 
+                <th class="isi fon"><button type="button" class="tombol-pelajaran" onclick="Upacara()"><span class="material-symbols-rounded size-20">flag</span></button></th>
+                <th class="isi fon" colspan="6"><button type="button" class="tombol-pelajaran" onclick="DPK1()">DPK</button></th>
+                <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="PPKn()">PKN</button></th>
+                <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="BJawa()">B. Jawa</button></th>
+            </tr>
+            <tr>
+                <th class="judul fon">Selasa</th>
+                <th class="isi fon" colspan="3"><button type="button" class="tombol-pelajaran" onclick="Penjas()">Penjas</button></th>
+                <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="bi()">B. Indo</button></th>
+                <th class="isi fon" colspan="4"><button type="button" class="tombol-pelajaran" onclick="TIK()">Informatika</button></th>
+                <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="BK()">BK</button></th>
+            </tr>
+            <tr>
+                <th class="judul fon">Rabu</th>       
+                <th class="isi fon" colspan="3"><button type="button" class="tombol-pelajaran" onclick="IPAS()">IPAS</button></th>
+                <th class="isi fon" colspan="3"><button type="button" class="tombol-pelajaran" onclick="english()">B.Ing</button></th>
+                <th class="isi fon" colspan="6"><button type="button" class="tombol-pelajaran" onclick="DPK2()">DPK</button></th>
+            </tr>
+            <tr>
+                <th class="judul fon">Kamis</th>
+                <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="MTK()">MTK</button></th>
+                <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="bi()">B. Indo</button></th>
+                <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="english()">B. Ing</button></th>
+                <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="SI()">Sejarah</button></th>
+                <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="SB()">SB</button></th>
+                <th class="isi fon"><button type="button" class="tombol-pelajaran" onclick="JamKos()"><span class="material-symbols-rounded size-20">do_not_disturb_on</span></button></th>
+            </tr>
+            <tr>
+                <th class="judul fon">Jum'at</th>
+                <th class="isi fon"><button type="button" class="tombol-pelajaran" onclick="Senam()"><span class="material-symbols-rounded size-20">sports_gymnastics</span></button></th>
+                <th class="isi fon" colspan="3"><button type="button" class="tombol-pelajaran" onclick="PAI()">PAI</button></th>
+                <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="MTK()">MTK</button></th>
+                <th class="isi fon" colspan="3"><button type="button" class="tombol-pelajaran" onclick="IPAS()">IPAS</button></th>
+                <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="s_jumat()"><span class="material-symbols-rounded size-20">hiking</span></button></th>
+            </tr>
+        </table>
+        <font class="deskripsi">Pencet nama pelajaran untuk melihat Informasi</font>
+        <br>
+        <article class="judul-seragam">Seragam</article>
+        <br>
+        <table>
+            <tr>
+                <th class="judul fon">Senin</th>
+                <th class="judul fon">Selasa</th>
+                <th class="judul fon">Rabu</th>
+                <th class="judul fon">Kamis</th>
+                <th class="judul fon">Jumat</th>
+            </tr>
+            <tr>
+                <th class="isi fon"><button class="tombol-pelajaran" onclick="s_senin()">Abu-putih pnjg</button></th>
+                <th class="isi fon"><button class="tombol-pelajaran" onclick="s_selasa()">Batik Jogja</button></th>
+                <th class="isi fon"><button class="tombol-pelajaran" onclick="s_rabu()">Batik sklh</button></th>
+                <th class="isi fon"><button class="tombol-pelajaran" onclick="s_kamis()">Abu-putih pndk</button></th>
+                <th class="isi fon"><button class="tombol-pelajaran" onclick="s_jumat()">Prmk</button></th>
+                
+            </tr>
+        </table>
+        <br>
+    </section>
+</body>
+</html>
