@@ -13,7 +13,7 @@
         .button{
             border: none;
             cursor: pointer;
-            border-radius: 42px 42px 42px 42px;
+            border-radius: 8px;
             height: 32pt;
         }
         body{
@@ -28,19 +28,13 @@
             align-items: center;
             gap: 4px;
         }
-        .button-primary{
-            background-color: #101449ff;
-            width: 110pt;
-        }
         .button-secondary{
-            background-color: #101449ff;
+            background-color: #160d26;
             width: 110pt;
-        }
-        .button-primary:hover{
-            background-color: #472D77ff;
+            height: 30pt;
         }
         .button-secondary:hover{
-            background-color: #472D77ff;
+            background-color: #b3193a;
         }
         .table{
             color: rgb(36, 36, 36);
@@ -49,29 +43,29 @@
         .fon{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 14px;
-            color: #ffffff;
+            color: #debc7e;
         }
         .isi{
             border: none;
-            border-radius: 24px 24px 24px 24px;
-            background-color: #101449ff;
-            color: #ffffff;
+            border-radius: 8px;
+            background-color: #160d26;
             width: 30pt;
             height: 30pt;
+            border: 1px solid #b3193a;
         }
         .judul{
             border: none;
-            border-radius: 24px 24px 24px 24px;
-            background-color: #472D77ff;;
-            color: rgb(203, 216, 255);
+            border-radius: 8px;
+            background-color: #b3193a;
+            color: #debc7e;
             width: 50pt;
             height: 30pt;
         }
         .judul-atas{
             border: none;
-            border-radius: 24px 24px 24px 24px;
-            background-color: #472D77ff;;
-            color: rgb(203, 216, 255);
+            border-radius: 8px;
+            background-color: #b3193a;
+            color: #debc7e;
             width: 30pt;
             height: 30pt;
         }
@@ -139,23 +133,30 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 14px;
             font-weight: 600;
-            color: #ffffff;
+            color: #debc7e;
         }
-        section{
+        .section{
             height: auto;
             width: auto;
-            border-radius: 24px 24px 24px 24px;
-            background: rgba(255, 255, 255, 0.1);
+            padding-left: 6pt;
+            padding-right: 6pt;
+            border-radius: 6px;
+            background: rgba(22, 13, 38, 0.219);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
-            backdrop-filter: none;
-            backdrop-filter: blur(2px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(3px);
+            border: 0.01px solid #b3193a;
+        }
+        @media only screen and (max-width: 500px) {
+            .section {
+                padding-left: 1pt;
+                padding-right: 1pt;
+            }
         }
         .judul-dokumen {
             font-size: larger;
             font-weight: 750;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #101449ff;
+            font-family: Roboto-Condensed;
+            color: #b3193a;
             position: absolute;
             left: 50%;
             transform: translate(-50%, 0%);
@@ -163,13 +164,13 @@
         .judul-seragam {
             font-size: larger;
             font-weight: 750;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #101449ff;
+            font-family: Bebas;
+            color: #b3193a;
             display: flex;
             justify-content: center;
         }
         .deskripsi{
-            color: #101449ff;
+            color: #debc7e;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: medium;
             font-weight: 500;
@@ -181,8 +182,6 @@
             display: flex;
             align-items: center;
             justify-content: end;
-            margin-left: 10pt;
-            margin-right: 10pt;
             margin-top: 7pt;
             margin-bottom: 10pt;
         }
@@ -190,13 +189,13 @@
             border: none;
             background-color: transparent;
             cursor: pointer;
-            color: #101449ff;
+            color: #b3193a;
         }
         .hamburger:hover{
-            color: #472D77ff;
+            color: #e6224c;
         }
         .nav-menu{
-            height: 80pt;
+            height: 112pt;
             width: 120pt;
             gap: 5px;
             display: none;
@@ -206,17 +205,157 @@
             position: absolute;
             left: 100%;
             transform: translate(-100%, 0%);
-            border-radius: 24px 24px 24px 24px;
-            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            background: rgba(46, 37, 61, 0.6);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(22, 13, 38, 0.5);
             backdrop-filter: blur(2px);
+        }
+        .Info-jadwal {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 32px;
+            background: rgba(22, 13, 38, 0.9);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 215pt;
+            height: 296pt;
+            padding: 4pt;
+            color: #ffffff;
+            z-index: 1;
+        }
+        .blok {
+            margin: 14pt;
+            padding: 0;
+        }
+        .tutup {
+            cursor: pointer;
+            background-color: #b3193a;
+            color: #160d26;
+            box-shadow: 3px 4px 16px rgba(179, 25, 58, 0.45);
+            border: none;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 24pt;
+            width: 24pt;
+            position: absolute;
+            left: calc(0% + 15px);
+            top: calc(0% + 15px);
+        }
+        .ground {
+            border-radius: 24px 80% 24px 24px;
+            background-color: rgb(22, 13, 38);
+            width: 215pt;
+            height: 184pt;
+            position: absolute;
+            bottom: 6pt;
+            z-index: 3;
+        }
+        .pont {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: medium;
+            font-weight: 600;
+            color: #debc7e;
+        }
+        .medsos-button {
+            height: 28pt;
+            width: 28pt;
+            border: none;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #b3193a;
+            box-shadow: 3px 4px 16px rgba(179, 25, 58, 0.45);
+        }
+        .medsos-button:hover {
+            transform: translateY(-3px);
+        }
+        .medsos {
+            width: 100%;
+            height: 40pt;
+            padding-left: 20pt;
+            padding-right: 5pt;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            gap: 14pt;
+            position: absolute;
+            bottom: 14pt;
+        }
+        .icon-medsos {
+            height: 100%;
+            width: 100%;
+        }
+        .scr {
+            color: #b3193a;
+            text-decoration: none;
+            font-weight: 650;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .pustaka {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        @font-face {
+            font-family: Bebas;
+            src: url(Bebas-Regular.otf);
+        }
+        @font-face {
+            font-family: Roboto-Condensed;
+            src: url(Roboto.ttf);
+        }
+        .nama {
+            color: #b3193a;
+            font-family: Bebas;
+            font-weight: 400;
+            font-size: 40pt;
+            position: absolute;
+            top: 40pt;
+            left: 26pt;
+            z-index: 2;
+        }
+        .garis {
+            width: 50pt;
+            height: 2px;
+            background-color: #b3193a;
+            z-index: 2;
+            position: absolute;
+            top: 84pt;
+            left: 26pt;
+        }
+        .kelas {
+            color: #b3193a;
+            font-family: Roboto-Condensed;
+            font-size: 12pt;
+            position: absolute;
+            top: 88pt;
+            left: 26pt;
+            z-index: 2;
+        }
+        .figure {
+            z-index: 2;
+            height: 170pt;
+            width: 104pt;
+            position: absolute;
+            bottom: 114pt;
+            right: 16pt;
+        }
+        .spasi {
+            height: 10pt;
         }
     </style>
     <script type="text/javascript">
-        function pesan() {
-            alert ("jadwal pelajaran kelas 10 TKJ B. dibuat oleh Ata")
-        }
         console.warn("Gimana Rasanya Taruna. Enak?")
         console.error("Jangan Nyerah Ya. Tetap Bersabar")
         function DPK1() {
@@ -290,41 +429,51 @@
         function s_jumat() {
             alert("Pramuka")
         }
-
-        function MenuToggle() {
-            var div = document.getElementById("Menu");
-            if (div.style.display === "none") {
-                div.style.display = "flex";
-            } else {
-                div.style.display = "none";
-            }
+        
+        function opsi() {
+            document.getElementById("Menu").style.display="flex";
+        }
+        function ttp() {
+            document.getElementById("Menu").style.display="none";
+        }
+        function Tutup() {
+            document.getElementById("popup").style.display="none";
+        }
+        function pesan() {
+            document.getElementById("popup").style.display="flex";
         }
     </script>
 </header>
 <body class="gambar">
-    <section>
+    <section class="section">
         <article>
             <div class="menu">
                 <font class="judul-dokumen">Jadwal pelajaran</font>                
-                <button type="button" class="hamburger" onclick="MenuToggle()"><span class="material-symbols-rounded size-26">menu</span></button>
+                <button type="button" class="hamburger" onclick="opsi()"><span class="material-symbols-rounded size-26">menu</span></button>
             </div>
         </article>
         <div class="nav-menu" id="Menu">
             <button type="button" class="button-secondary button fon" onclick="pesan()">
                 <div class="div">
-                    <span class="material-symbols-rounded size-20">info</span>info
+                    <span class="material-symbols-rounded size-20">info</span>Info
                 </div>
             </button>
-            <div>        
-                <a href="https://wa.me/qr/IISMW4IADWNRL1" target="_blank"></a>
-                    <button type="button" class="button-primary button fon">
+            <div>
+                <a href="https://wa.me/qr/IISMW4IADWNRL1" target="_blank">                    
+                    <button type="button" class="button-secondary button fon">
                         <div class="div">
                             <span class="material-symbols-rounded size-20">support_agent</span>
-                            lapor Kesalahan
+                            Lapor Kesalahan
                         </div>
                     </button>
                 </a>
-            </div>      
+            </div>     
+            <button type="button" onclick="ttp()" class="button-secondary button fon">
+                <div class="div">
+                    <span class="material-symbols-rounded size-20">close</span>
+                    Tutup
+                </div>
+            </button> 
         </div>
         <table align="center" class="tabel">
             <tr>
@@ -405,4 +554,51 @@
         <br>
     </section>
 </body>
+<main class="Info-jadwal" id="popup">
+    <nav class="topbar">
+        <button type="button" onclick="Tutup()" class="tutup"><span class="material-symbols-rounded size-20">close</span></button>
+    </nav>
+    <font class="nama">ATA</font><br><div class="garis"></div><br><font class="kelas">X TKJ B</font>
+    <img src="figure.png" alt="figure" class="figure">
+    <article class="ground">
+        <blockquote class="blok">
+            <font class="pont">Jadwal pelajaran<br>untuk kelas 10 TKJ B<br>tahun 2024</font>
+            <div class="spasi"></div>
+            <div>
+                <font class="pont">Sumber ikon:<br>
+                    <div style="display: flex; justify-content: baseline; align-items: center; gap: 6px;">
+                        <img src="materialIcons.png" alt="materialIcons" style="height: 12px; width: 18px;">
+                        <a href="https://fonts.google.com/icons?icon.style=Rounded" target="_blank" class="scr">Material Symbols & Icons</a>
+                    </div>
+                    <div style="display: flex; justify-content: baseline; align-items: center; gap: 7px; margin-left: 3px;">
+                        <img src="icons8.svg" alt="icons8" style="height: 14px; width: 14px;">
+                        <a href="https://icons8.com/icons" target="_blank" class="scr">Icons8</a>
+                    </div>
+                </font>
+            </div>
+        </blockquote>
+        <article class="medsos">
+            <a href="http://wa/me/qr/IISMW4IADWNRL1" target="_blank">
+                <button type="button" class="medsos-button button fon" style="cursor: pointer;">
+                    <img src="whatsapp.svg" alt="whatsapp" class="icon-medsos">
+                </button>
+            </a>
+            <a href="https://github.com/SKAONET-TKJ-27" target="_blank">
+                <button type="button" class="medsos-button button fon" style="cursor: pointer;">
+                    <img src="github.svg" alt="github" class="icon-medsos">
+                </button>
+            </a>
+            <a href="http://" target="_blank">
+                <button type="button" class="medsos-button button fon" style="cursor: not-allowed;">
+                    <img src="instagram.svg" alt="instagram" class="icon-medsos">
+                </button>
+            </a>
+            <a href="http://" target="_blank">
+                <button type="button" class="medsos-button button fon" style="cursor: not-allowed;">
+                    <img src="tiktok.svg" alt="tiktok" class="icon-medsos">
+                </button>
+            </a>
+        </article>
+    </article>
+</main>
 </html>
