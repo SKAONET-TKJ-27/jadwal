@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html class="gambar">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
     <title>
         Jadwal X TKJ B
     </title>
-    <meta name="theme-color" content="#b3193a"/>
+    <meta name="theme-color" content="#160d26"/>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
     <style type="text/css">
@@ -140,22 +140,30 @@
             width: auto;
             padding-left: 6pt;
             padding-right: 6pt;
-            border-radius: 6px;
-            background: rgba(22, 13, 38, 0.219);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            background: rgba(200, 200, 200, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(3px);
-            border: 0.01px solid #b3193a;
+            border: 0.01px solid #ffffff41;
         }
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 550px) {
             .section {
                 padding-left: 1pt;
                 padding-right: 1pt;
+                border: 0.01px solid #ffffff41;
+                background: #160d26ec;
+                border-radius: 6px;
+                backdrop-filter: blur(0px);
+            }
+            .judul {
+                width: auto;
+                height: 20pt;
             }
         }
         .judul-dokumen {
             font-size: larger;
             font-weight: 750;
-            font-family: Bebas;
+            font-family: Roboto-Condensed;
             color: #b3193a;
             position: absolute;
             left: 50%;
@@ -444,7 +452,7 @@
         }
     </script>
 </header>
-<body class="gambar">
+<body>
     <section class="section">
         <article>
             <div class="menu">
@@ -522,7 +530,7 @@
                 <th class="isi fon"><button type="button" class="tombol-pelajaran" onclick="JamKos()"><span class="material-symbols-rounded size-20">do_not_disturb_on</span></button></th>
             </tr>
             <tr>
-                <th class="judul fon">Jum'at</th>
+                <th class="judul fon">Jumat</th>
                 <th class="isi fon"><button type="button" class="tombol-pelajaran" onclick="Senam()"><span class="material-symbols-rounded size-20">sports_gymnastics</span></button></th>
                 <th class="isi fon" colspan="3"><button type="button" class="tombol-pelajaran" onclick="PAI()">PAI</button></th>
                 <th class="isi fon" colspan="2"><button type="button" class="tombol-pelajaran" onclick="MTK()">MTK</button></th>
@@ -578,7 +586,7 @@
             </div>
         </blockquote>
         <article class="medsos">
-            <a href="http://wa/me/qr/IISMW4IADWNRL1" target="_blank">
+            <a href="http://wa.me/qr/IISMW4IADWNRL1" target="_blank">
                 <button type="button" class="medsos-button button fon" style="cursor: pointer;">
                     <img src="whatsapp.svg" alt="whatsapp" class="icon-medsos">
                 </button>
